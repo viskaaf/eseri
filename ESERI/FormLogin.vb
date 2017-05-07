@@ -15,10 +15,10 @@ Public Class FormLogin
 
             If RD.HasRows Then 'jika ada akun
                 jenisKelamin = RD.Item(6)
-                MsgBox("Selamat datang, " & TBUsername.Text & "!")
+                MsgBox("Selamat datang, " & RD.Item(1) & " " & RD.Item(2) & "!" & jenisKelamin)
                 Me.Visible = False
                 FormMenu.Visible = True
-                waktuDuduk = 100
+                waktuDuduk = HitungDuduk(RD)
             End If
         Catch ex As Exception
             MsgBox(ex.ToString, MsgBoxStyle.Critical, "Terjadi Kesalahan")

@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub BTLogout_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTLogout.Click
-        Me.Visible = False
+        Me.Close()
         FormLogin.Visible = True
         FormLogin.TBUsername.Text = ""
         FormLogin.TBPassword.Text = ""

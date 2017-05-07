@@ -6,8 +6,6 @@ Module Connection
     Public CMD As MySqlCommand
     Public DS As DataSet
     Public insert, update, delete As String
-    Public waktuDuduk As Integer
-    Public jenisKelamin As String
 
     Public Sub openConnection()
         Dim sqlConn As String

@@ -67,6 +67,7 @@ Partial Class WarningForm
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "WarningForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

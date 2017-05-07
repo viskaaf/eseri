@@ -114,6 +114,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Connection.vb" />
+    <Compile Include="UserControl.vb" />
     <Compile Include="WarningForm.Designer.vb">
       <DependentUpon>WarningForm.vb</DependentUpon>
     </Compile>

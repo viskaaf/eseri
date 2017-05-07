@@ -28,6 +28,7 @@
         Me.Visible = False
         FormTime.Visible = True
         lagu = TBSong.Text
+        startAllActivity()
     End Sub
   
     Private Sub PBBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PBBack.Click
