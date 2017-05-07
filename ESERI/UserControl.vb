@@ -41,7 +41,14 @@ Module UserControl
         End If
 
         'itung berdasarkan berat badan
-        waktu += Math.Ceiling(bbIdeal - bb) * 5
+
+        If (bbIdeal - bb) < 0 Then
+            waktu += Math.Ceiling((bbIdeal - bb) / 8) * 5
+        Else
+            waktu += Math.Floor((bbIdeal - bb) / 8) * 5
+        End If
+
+
 
         'usia
 

@@ -6,6 +6,8 @@ Public Class FormRegister
 
         If cekRegister() = False Then
             MsgBox("Data Kosong")
+        ElseIf cekLength() = False Then
+            MsgBox("Username dan password minimal 8 karakter")
         Else
             If RBLaki.Checked Then
                 jk = "L"
@@ -58,17 +60,13 @@ Public Class FormRegister
     Function cekRegister() As Boolean
         If TBNamaDepan.Text = "" Then
             Return False
-        ElseIf TBNamaBelakang.Text - "" Then
+        ElseIf TBNamaBelakang.Text = "" Then
             Return False
-        ElseIf TBTinggi.Text - "" Then
+        ElseIf TBTinggi.Text = "" Then
             Return False
         ElseIf TBBerat.Text = "" Then
             Return False
-        ElseIf RBLaki.Checked = False Then
-            Return False
-        ElseIf RBPerempuan.Checked = False Then
-            Return False
-        ElseIf TBUsername.Text - "" Then
+        ElseIf TBUsername.Text = "" Then
             Return False
         ElseIf TBPassword.Text = "" Then
             Return False
@@ -77,8 +75,27 @@ Public Class FormRegister
         End If
     End Function
 
+
+    Function cekLength() As Boolean
+
+        If TBUsername.Text.Length < 8 Then
+            Return False
+        ElseIf TBPassword.Text.Length < 8 Then
+            Return False
+        Else
+            Return True
+        End If
+
+        Return 0
+    End Function
+
+
     Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
         Me.Close()
         FormLogin.Visible = True
+    End Sub
+
+    Private Sub FormRegister_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        RBLaki.Checked = True
     End Sub
 End Class
