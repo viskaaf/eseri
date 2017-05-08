@@ -78,21 +78,22 @@ Public Class FormRegister
 
     Function cekLength() As Boolean
 
-        If TBUsername.Text.Length < 8 Then
-            Return False
-        ElseIf TBPassword.Text.Length < 8 Then
-            Return False
-        Else
-            Return True
-        End If
+        'If TBUsername.Text.Length < 8 Then
+        '    Return False
+        'ElseIf TBPassword.Text.Length < 8 Then
+        '    Return False
+        'Else
+        Return True
+        'End If
 
-        Return 0
     End Function
 
 
     Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
         Me.Close()
         FormLogin.Visible = True
+        FormLogin.TBUsername.Text = ""
+        FormLogin.TBPassword.Text = ""
     End Sub
 
     Private Sub FormRegister_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

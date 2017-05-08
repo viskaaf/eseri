@@ -72,6 +72,7 @@ Partial Class FormLogin
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label5.Location = New System.Drawing.Point(120, 244)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(65, 13)

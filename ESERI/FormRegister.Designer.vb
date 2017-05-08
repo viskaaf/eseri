@@ -93,7 +93,6 @@ Partial Class FormRegister
         '
         Me.TBPassword.Location = New System.Drawing.Point(140, 337)
         Me.TBPassword.Name = "TBPassword"
-        Me.TBPassword.ReadOnly = True
         Me.TBPassword.Size = New System.Drawing.Size(202, 20)
         Me.TBPassword.TabIndex = 33
         Me.TBPassword.UseSystemPasswordChar = True

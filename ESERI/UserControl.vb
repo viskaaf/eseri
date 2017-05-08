@@ -5,7 +5,10 @@ Module UserControl
 
     Public Function hitungUmur(ByVal tgl As String) As Integer
         Dim tahun As Integer = CInt(tgl.Substring(6, 4))
-        Dim bulan As Integer = CInt(tgl.Substring(3, 2))
+        'Dim bulan As Integer = CInt(tgl.Substring(3, 2))
+
+        'dibawah ini khusus komputer ashari
+        Dim bulan As Integer = CInt(tgl.Substring(0, 2))
 
         Dim tahunSkg As Integer = CInt(Today.Year)
         Dim bulanSkg As Integer = CInt(Today.Month)
@@ -22,9 +25,15 @@ Module UserControl
     End Function
 
     Public Function HitungDuduk(ByVal RD As MySqlDataReader) As Double
-        Dim umur As Integer = hitungUmur(RD.Item(3))
-        Dim bb As Double = CDbl(RD.Item(4))
-        Dim bbIdeal As Double = CDbl(RD.Item(5) - 110)
+        Dim umur As Integer = hitungUmur(RD.Item(3).ToString)
+        'ini buat laptop viska
+        'Dim bb As Double = CDbl(RD.Item(4))
+        'Dim bbIdeal As Double = CDbl(RD.Item(5) - 110)
+
+        'ini buat laptop ashari
+        Dim bb As Double = CDbl(RD.Item(5))
+        Dim bbIdeal As Double = CDbl(RD.Item(4) - 110)
+
         Dim waktu As Double = 15
         ' waktu default 15 menit
         ' jika laki laki kurangi 0.5 menit, jika perempuan kurangi 0.25 menit
@@ -47,11 +56,9 @@ Module UserControl
         Else
             waktu += Math.Floor((bbIdeal - bb) / 8) * 5
         End If
-
-
+        MsgBox(bb.ToString + " " + bbIdeal.ToString + " " + (bbIdeal - bb).ToString)
 
         'usia
-
         If umur <= 30 Then
             waktu += 0
         ElseIf umur <= 40 Then

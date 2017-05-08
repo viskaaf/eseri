@@ -41,15 +41,10 @@
     End Sub
 
     Private Sub WarningForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim pesanTambahan As String
         If jenisKelamin = "L" Then
-            pesanTambahan = "Kamu laki laki"
             PictureBox1.Image = My.Resources.giphy
         Else
-            pesanTambahan = "Kamu perempuan"
             PictureBox1.Image = My.Resources.dansers003
         End If
-
-        Label1.Text += vbCrLf & pesanTambahan
     End Sub
 End Class

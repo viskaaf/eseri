@@ -17,4 +17,9 @@
         FormLogin.TBPassword.Text = ""
         FormLogin.TBUsername.Focus()
     End Sub
+
+    Private Sub FormMenu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim lala As Double = hitungUmur(FormLogin.userDate)
+        MsgBox(FormLogin.userDate + " " + Today.Date.ToString + " " + lala.ToString + " " + waktuDuduk.ToString)
+    End Sub
 End Class

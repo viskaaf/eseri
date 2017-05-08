@@ -24,12 +24,12 @@ Partial Class FormMenu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMenu))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.BTLogout = New System.Windows.Forms.Button
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.BTSound = New System.Windows.Forms.Button
         Me.BTTime = New System.Windows.Forms.Button
-        Me.BTLogout = New System.Windows.Forms.Button
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,6 +46,18 @@ Partial Class FormMenu
         Me.GroupBox1.Size = New System.Drawing.Size(595, 346)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
+        '
+        'BTLogout
+        '
+        Me.BTLogout.BackColor = System.Drawing.Color.SeaGreen
+        Me.BTLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTLogout.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.BTLogout.Location = New System.Drawing.Point(245, 285)
+        Me.BTLogout.Name = "BTLogout"
+        Me.BTLogout.Size = New System.Drawing.Size(105, 40)
+        Me.BTLogout.TabIndex = 16
+        Me.BTLogout.Text = "LOGOUT"
+        Me.BTLogout.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -68,16 +80,6 @@ Partial Class FormMenu
         Me.Label1.Size = New System.Drawing.Size(75, 26)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "TIMER"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.ESERI
-        Me.PictureBox1.Location = New System.Drawing.Point(266, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(124, 102)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
         '
         'BTSound
         '
@@ -103,17 +105,15 @@ Partial Class FormMenu
         Me.BTTime.TabIndex = 7
         Me.BTTime.UseVisualStyleBackColor = False
         '
-        'BTLogout
+        'PictureBox1
         '
-        Me.BTLogout.BackColor = System.Drawing.Color.SeaGreen
-        Me.BTLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTLogout.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BTLogout.Location = New System.Drawing.Point(245, 285)
-        Me.BTLogout.Name = "BTLogout"
-        Me.BTLogout.Size = New System.Drawing.Size(105, 40)
-        Me.BTLogout.TabIndex = 16
-        Me.BTLogout.Text = "LOGOUT"
-        Me.BTLogout.UseVisualStyleBackColor = False
+        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.ESERI
+        Me.PictureBox1.Location = New System.Drawing.Point(266, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(124, 102)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'FormMenu
         '
